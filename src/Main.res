@@ -1,3 +1,4 @@
+%%raw("import './styles/main.css'")
 let root = ReactDOM.querySelector("#root")
 
 let () = switch root {
