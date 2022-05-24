@@ -1,5 +1,7 @@
+open CartHook
+
 @react.component
-let make = () => {
+let make = (~products: array<product>) => {
   let (visible, setVisible) = React.useState(_ => false)
 
   let onClick = evt => {
@@ -16,7 +18,7 @@ let make = () => {
       </button>
     </div>
     {if visible {
-      <Cart onClick />
+      <Cart onClick products />
     } else {
       <> </>
     }}
